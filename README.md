@@ -17,3 +17,53 @@ Open your terminal and execute the following command to clone the repository, or
 
 ```bash
 git clone https://github.com/dheena2k2/fusion2urdf-ros2.git
+```
+
+### Step 3: Copy the URDF Exporter Script
+
+#### For Windows (PowerShell)
+
+Open PowerShell and execute:
+
+```powershell
+cd <path to fusion2urdf-ros2>
+Copy-Item ".\URDF_Exporter_Ros2\" -Destination "${env:APPDATA}\Autodesk\Autodesk Fusion 360\API\Scripts\" -Recurse
+```
+
+#### For Mac (zsh or bash)
+
+Open your terminal and execute:
+
+```bash
+cd <path to fusion2urdf-ros2>
+cp -r ./URDF_Exporter_Ros2 "$HOME/Library/Application Support/Autodesk/Autodesk Fusion 360/API/Scripts/"
+```
+
+### Step 4: Run the URDF Exporter Script in Fusion 360
+In Fusion 360, navigate to `Utilities > ADD-INS > Scripts and ADD-INS`.
+Find and run `URDF_Exporter_Ros2`.
+
+### Step 5: Save the Description File
+
+Save the generated description file in your preferred folder. This description package will contain necessary files, including a `.launch` file with `gazebo.launch.py`, which can be used to run your SimpleBot or any other 3D model in ROS2. These files allow for various tasks, such as:
+
+- **Simulation**: Run and test your robot in Gazebo.
+- **Visualization**: Use RViz to visualize your robot.
+- **Control**: Develop and test control algorithms in ROS2.
+
+You can also use the provided URDF file of SimpleBot directly in ROS2 for other tasks, such as:
+
+- **Path Planning**: Test and develop path planning algorithms.
+- **SLAM**: Implement Simultaneous Localization and Mapping.
+- **Sensor Integration**: Integrate and test various sensors with your robot.
+
+## Future Work
+
+Instructions for running SimpleBot in Gazebo will be added soon.
+
+## Acknowledgments
+
+The instructions provided here, particularly those in Step 3, are based on the work from [Dheenadhayalan R's GitHub repository](https://github.com/dheena2k2). Please check out their repository for more details.
+
+
+
