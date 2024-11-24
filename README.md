@@ -16,7 +16,7 @@ Construct your bot or download the pre-modeled SimpleBot available in both `.f3d
 Open your terminal and execute the following command to clone the repository, or download it manually:
 
 ```bash
-git clone https://github.com/dheena2k2/fusion2urdf-ros2.git
+git clone https://github.com/Gautham-Ramkumar03/fusion2urdf-ros2.git
 ```
 
 ### Step 3: Copy the URDF Exporter Script
